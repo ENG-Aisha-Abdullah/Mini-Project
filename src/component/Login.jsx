@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,7 +17,7 @@ function Login() {
         navigate("Home");
      
     } else {
-      alert("Invalid email or password");
+       Swal.fire("Invalid email or password");
     }
 
   };

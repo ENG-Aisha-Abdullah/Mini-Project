@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -13,24 +14,24 @@ function SignUp() {
 
 
        if (name.length < 3) {
-      return alert("Name must be at least 3 characters long");
+      return  Swal.fire("Name must be at least 3 characters long");
     } else if (name.length > 50) {
-      return alert("Name must be less than 50 characters");
+      return  Swal.fire("Name must be less than 50 characters");
     }
 
     if (password.length < 8) {
-      return alert("Password must be at least 8 characters long");
+      return  Swal.fire("Password must be at least 8 characters long");
     }
 
     if (password !== rePassword) {
-      return alert("Passwords must be matched");
+      return  Swal.fire("Passwords must be matched");
     }
 
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     localStorage.setItem("name", name);
 
-    alert("Sign Up successful!");
+     Swal.fire("Sign Up successful!");
 
     navigate("/");
 
