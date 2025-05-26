@@ -29,7 +29,7 @@ function SignUp() {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
     localStorage.setItem("name", name);
-    
+
     alert("Sign Up successful!");
     window.location.href = "/Login";
   };
@@ -127,7 +127,7 @@ function SignUp() {
             Yoy already have an account?
             <Link
               className="text-gray-700  font-bold px-2 hover:underline hover:bg-amber-200 p-2 rounded"
-              to="/Login"
+              to="/"
             >
               Sign In
             </Link>
