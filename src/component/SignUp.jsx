@@ -52,7 +52,7 @@ function SignUp() {
           <h1 className="text-black text-3xl font-bold">SignUp</h1>
 
           {/* Name */}
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center max-sm:flex-col max-sm:items-start">
             <label
               className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
               htmlFor="username"
@@ -65,12 +65,12 @@ function SignUp() {
               type="text"
               required
               placeholder="name"
-              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
             />
             <p></p>
           </div>
           {/* Email */}
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center max-sm:flex-col max-sm:items-start">
             <label
               className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
               htmlFor="email"
@@ -83,11 +83,11 @@ function SignUp() {
               type="email"
               required
               placeholder="Email@email.com"
-              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
             />
           </div>
           {/* Password */}
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center max-sm:flex-col max-sm:items-start">
             <label
               className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
               htmlFor="password"
@@ -100,11 +100,11 @@ function SignUp() {
               type="password"
               required
               placeholder="Password"
-              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
             />
           </div>
           {/* Re Password */}
-          <div className="flex gap-1 items-center">
+          <div className="flex gap-1 items-center max-sm:flex-col max-sm:items-start">
             <label
               className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
               htmlFor="password"
@@ -117,7 +117,7 @@ function SignUp() {
               type="password"
               required
               placeholder="Re Password"
-              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+              className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
             />
           </div>
 

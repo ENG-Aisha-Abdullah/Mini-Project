@@ -51,7 +51,7 @@ const [height, setHeight] = useState("");
             Body Mass Index (BMI) Calculator
         </h1>
         {/* weight */}
-        <div className="flex gap-1 items-center">
+        <div className="flex gap-1 max-sm:flex-col max-sm:items-start items-center">
           <label
             className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
             htmlFor="email"
@@ -64,11 +64,11 @@ const [height, setHeight] = useState("");
               type="number"
               required
             placeholder="Enter your weight"
-            className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+            className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
           />
         </div>
         {/* Password */}
-        <div className="flex gap-1 items-center">
+        <div className="flex gap-1 max-sm:flex-col max-sm:items-start items-center">
           <label
             className="text-gray-500 font-bold text-xl min-w-30 block whitespace-nowrap"
             htmlFor="password"
@@ -81,7 +81,7 @@ const [height, setHeight] = useState("");
               type="number"
               required
             placeholder="Enter your height"
-            className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-100"
+            className="border-gray-500 border-1 p-1 px-2 rounded focus:outline-amber-300 w-full"
           />
         </div>
 
