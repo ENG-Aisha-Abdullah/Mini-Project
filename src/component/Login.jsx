@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router";
 import { useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,12 +13,11 @@ function Login() {
 
     if (email === storedEmail && password === storedPassword) {
       alert("Login successful!");
+        navigate("Home");
      
     } else {
       alert("Invalid email or password");
     }
-
-    navigate("Home");
 
   };
 
