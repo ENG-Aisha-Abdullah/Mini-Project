@@ -1,13 +1,13 @@
 import React from "react";
-import { createElement } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
    const [rePassword, setRePassword] = useState("");
-
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
       e.preventDefault();
 
@@ -31,7 +31,10 @@ function SignUp() {
     localStorage.setItem("name", name);
 
     alert("Sign Up successful!");
-    window.location.href = "/Login";
+
+    navigate("/");
+
+   
   };
   
 
@@ -121,7 +124,8 @@ function SignUp() {
             type="submit"
             className="bg-amber-200 text-gray-800 font-bold text-xl p-2 rounded hover:bg-amber-300 transition duration-300"
           >
-            Login
+            
+            Sign Up
           </button>
           <p className="text-center text-sm text-gray-700">
             Yoy already have an account?

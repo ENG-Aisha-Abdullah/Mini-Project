@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { NavLink } from "react-router";
+import { useNavigate } from "react-router-dom";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    const navigate = useNavigate();
     const handleSubmit = (e) => {
       e.preventDefault();
 
@@ -15,7 +18,9 @@ function Login() {
     } else {
       alert("Invalid email or password");
     }
-       window.location.href = "/Home";
+
+    navigate("Home");
+
   };
 
   // console.log("Username:", username);
@@ -74,7 +79,7 @@ function Login() {
             Don't have an account?
             <Link
               className="text-gray-700  font-bold px-2 hover:underline hover:bg-amber-200 p-2 rounded"
-              to="/SignUp"
+              to="SignUp"
             >
               Sign Up
             </Link>
