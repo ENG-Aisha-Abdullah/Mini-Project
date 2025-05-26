@@ -29,7 +29,8 @@ const [height, setHeight] = useState("");
 
     const PerfectBMI = (e) => {
         e.preventDefault();
-        
+       const perfect = height - 100 ;
+        Swal.fire(`Your Perfect Body Mass Index is: ${perfect}`);
     }
     
 
@@ -106,7 +107,7 @@ const [height, setHeight] = useState("");
           onClick={PerfectBMI}
           className="bg-amber-200 text-gray-800 font-bold text-xl p-2 rounded hover:bg-amber-300 transition duration-300"
         >
-          Body Mass Index State
+         Your Perfect Body Mass Index 
         </button>
       </form>
     </div>
